@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 06-06-2013 a las 20:01:14
+-- Tiempo de generación: 06-06-2013 a las 23:34:26
 -- Versión del servidor: 5.1.66
 -- Versión de PHP: 5.3.3-7+squeeze15
 
@@ -27,14 +27,14 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 CREATE TABLE IF NOT EXISTS `questions` (
   `ID` int(255) NOT NULL AUTO_INCREMENT,
-  `pregunta` text CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  `A` text CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  `B` text CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  `C` text CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  `D` text CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  `correcta` text CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `pregunta` varchar(64) NOT NULL,
+  `A` varchar(16) NOT NULL,
+  `B` varchar(16) NOT NULL,
+  `C` varchar(16) NOT NULL,
+  `D` varchar(16) NOT NULL,
+  `correcta` varchar(1) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- Volcar la base de datos para la tabla `questions`
