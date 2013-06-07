@@ -1,11 +1,11 @@
 '*****************************************
-'* Nosy Cube - Javier Sáez de la Coba    *
+'* Nosy Cube - Javier Sï¿½ez de la Coba    *
 '*                                       *
-'* I.E.S. Bembézar   2013                *
+'* I.E.S. Bembï¿½zar   2013                *
 '*                                       *
 '*****************************************
 
-DelayMS 100sciio
+DelayMS 100
 
 Declare LCD_Lines 4
 Inicio:
