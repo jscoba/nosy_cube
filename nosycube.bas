@@ -32,7 +32,11 @@ Inicio:
     ans = "ans"
 
 RAMDOM:
-    If PORTC.0 | PORTC.1 | PORTC.2 | PORTC.3 =1 Then
+	Low PORTA.0
+	Low PORTA.1
+	Low PORTA.2
+	Low PORTA.3    
+	If PORTC.0 | PORTC.1 | PORTC.2 | PORTC.3 =1 Then
         If number >= maxquest Then 
             number = 1
         Else
