@@ -10,7 +10,7 @@ DelayMS 100
 Declare LCD_Lines 4
 Inicio:
 
-    Print At 1,2, "Nosy Cube"
+    Print At 2,1, "Nosy Cube"
     Dim pin As Word           'pin de marcador
     Dim ansA As String * 16
     Dim ansB As String * 16
@@ -51,9 +51,9 @@ RAMDOM:
 
 PREGUNTA:
     Print At 1,1, quest1
-    Print At 1,2, quest2
-    Print At 1,3, quest3
-    Print At 1,4, quest4
+    Print At 2,1, quest2
+    Print $FE,$90, quest3
+    Print $FE,$D0, quest4
     GoTo LUCES
     
 LUCES:
@@ -78,9 +78,9 @@ RESPUESTA:
     printc= "C." + ansC
     printd= "D." + ansD
     Print At 1,1, printa
-    Print At 1,2, printb
-    Print At 1,3, printc
-    Print At 1,4, printd
+    Print At 2,1, printb
+    Print $FE,$90, printc
+    Print $FE,$D0, printd
     GoTo DECIDIR
 
 DECIDIR:
@@ -108,24 +108,24 @@ DECIDIR:
   EndIf
     
 CORRECTA:
-    Print At 1,1, "  ___  _  ___ "
-    Print At 1,2, " / _ \| |/ / |"
-    Print At 1,3, "| (_) | ' <|_|"
-    Print At 1,4, " \___/|_|\_(_)"
+    Print At 1,1,  "  ___  _  ___ "
+    Print At 2,1,  " / _ \| |/ / |"
+    Print $FE,$90, "| (_) | ' <|_|"
+    Print $FE,$D0, " \___/|_|\_(_)"
     DelayMS 2000
     GoTo RAMDOM
 
 INCORRECTA:
 
-    Print At 1,1, " _  _  ___  _ "   
-    Print At 1,2, "| \| |/ _ \| |"
-    Print At 1,3, "| .` | (_) |_|"
-    Print At 1,4, "|_|\_|\___/(_)"
+    Print At 1,1,  " _  _  ___  _ "   
+    Print At 2,1,  "| \| |/ _ \| |"
+    Print $FE,$90, "| .` | (_) |_|"
+    Print $FE,$D0, "|_|\_|\___/(_)"
     DelayMS 1500
     Cls
     Print At 1,1, "La respuesta" 
-    Print At 1,2, "correcta era:"
-    Print At 1,3, true
+    Print At 2,1, "correcta era:"
+    Print $FE,$90, true
     DelayMS 1500
     GoTo RAMDOM
 
